@@ -23,7 +23,7 @@ set BUILD_CONFIG="Release"
 set RUN_TESTS="true"
 
 echo //   libprimes v1.0.0   //
-echo // made by <franzageek> //
+echo // made by ^<franzageek^> //
 
 for %%a in (cmake, make, ctest) do (
     where %%a >nul 2>nul

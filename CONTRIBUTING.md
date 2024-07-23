@@ -2,6 +2,7 @@
 
 ## Table of contents
 
+___
 - [General information](#general-information)
 - [Conventions](#conventions)
 - [Development environment setup](#development-environment-setup)

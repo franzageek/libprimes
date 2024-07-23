@@ -4,10 +4,10 @@
 ![](https://img.shields.io/github/issues/franzageek/libprimes)
 
 # libprimes
-A C library containing various functions related to prime numbers. 
+A C/C++ library containing various prime number utilities. 
 
 ## Introduction
-_**libprimes**_ is a C library whose aim is to provide a bunch of useful functions to allow C/C++ programmers to deal with prime numbers with more ease.
+_**libprimes**_ is a library written in C whose aim is to provide a bunch of useful functions to allow C/C++ programmers to deal with prime numbers with more ease.
 
 Its first version, as of July 23rd 2024, includes:
 -  a primimality-check function;

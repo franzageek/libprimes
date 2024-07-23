@@ -57,7 +57,7 @@ You can start off by forking the franzageek/libprimes repository and create your
 
 Then you can create a new branch with the name of the feature you're going to implement.
 
-Make sure to keep your copy of repository updated with the main repository - there could be mismatches if you miss updates on the main repo.
+Make sure to keep your repository copy up to date with the main repository - there could be mismatches if you miss updates of the main repo.
 
 The preferred build method is CMake, although you can choose a different one, I'll take care of linking it to the top-level build system.
 

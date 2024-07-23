@@ -1,5 +1,6 @@
 ![](https://img.shields.io/github/license/franzageek/libprimes)
 ![](https://img.shields.io/github/v/release/franzageek/libprimes)
+![](https://img.shields.io/github/downloads/franzageek/libprimes/total)
 ![](https://img.shields.io/github/last-commit/franzageek/libprimes)
 ![](https://img.shields.io/github/issues/franzageek/libprimes)
 

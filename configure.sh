@@ -54,3 +54,5 @@ fi
 cmake -DBUILD_TESTS=OFF -DCMAKE_BUILD_TYPE=$BUILD_CONFIG ..
 
 make install -j
+
+exit 0

@@ -15,7 +15,7 @@ Its first version, as of July 23rd 2024, includes:
 
 I'm planning to keep on adding more & more features to it, in the hope for it to be adopted from more & more people.
 
-## Building
+## How to build
 Just download the source code, extract it somewhere comfortable, then open a command prompt in that folder and run the following command:
 
 - If you're on Linux, run:
@@ -26,7 +26,8 @@ $ ./configure.sh
 ```batch
 > configure.bat
 ```
-> **NOTE:** I haven't tested configure.bat yet, but it _should_ work, cause it is pretty much the same code as configure.sh.
+> [!WARNING]
+> I haven't been able to test configure.bat yet, but it _should_ work, cause it is pretty much the same code as configure.sh.
 
 You can customize various properties of the build, such as the build folder path, the build configuration & whether or not to run tests before installing.
 

@@ -25,8 +25,11 @@ I'm planning to keep on adding more & more features to it, in the hope for it to
 
 Just download the source code, extract it somewhere comfortable, then open a command prompt in that folder and run the following command:
 
-- If you're on Linux, run:
-
+- If you're on Linux, first run:
+```bash
+$ sudo chmod +x ./configure.sh
+```
+to make the script executable, then run it like so:
 ```bash
 $ ./configure.sh
 ```
@@ -61,4 +64,3 @@ gcc main.c -o main.out -lprimes
 To know more about libprimes itself, please check the [wiki](https://github.com/franzageek/libprimes/wiki).
 
 To discover how to take part in the project by contributing, check [CONTRIBUTING](CONTRIBUTING.md).
-

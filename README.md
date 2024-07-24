@@ -8,6 +8,8 @@
 
 A C/C++ library containing various prime number utilities.
 
+**<kbd>[Introduction](#introduction)</kbd>** - **<kbd>[How to build](#how-to-build)</kbd>** - **<kbd>[Compile against libprimes](#compile-against-libprimes)</kbd>** - **<kbd>[Additional info](#additional-info)</kbd>**
+
 ## Introduction
 
 _**libprimes**_ is a library written in C whose aim is to provide a bunch of useful functions to allow C/C++ programmers to deal with prime numbers with more ease.
@@ -43,6 +45,16 @@ You can customize various properties of the build, such as the build folder path
 To edit these properties, simply open the `configure.{sh|bat}` file in a text editor and search for the property you want to edit. These properties are defined at the top of the file.
 
 You'll just have to edit the `BUILD_DIR`, the `BUILD_CONFIG` and the `RUN_TESTS` variables according to your preferences. These variables will be passed to CMake when building the project.
+
+## Compile against libprimes
+
+To compile a program which uses functions from the libprimes library, you first have to install it, then make sure your program includes the `primes.h` header, then you're gonna need to add the `-lprimes` option to your compile command.
+
+E.G. if you're compiling with gcc, you're gonna need to run a similar command:
+
+```bash
+gcc main.c -o main.out -lprimes
+```
 
 ## Additional info
 

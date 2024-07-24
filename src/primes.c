@@ -1,5 +1,5 @@
 /***************************************************************************
- *      libprimes v1.0.0 - The C Library for Prime Numbers                 *
+ *      libprimes v1.0.1 - The C Library for Prime Numbers                 *
  *      primes.c                                                           *
  *      Copyright (C) 2020->2024 <franzageek> - all rights reserved        *
  *                                                                         *
@@ -29,7 +29,8 @@ typedef struct
     u64 start;
     u64 end;
     bool is_prime;  
-} thread_data;
+} 
+thread_data;
 
 void* trial_division(void* _data)
 {
@@ -93,7 +94,7 @@ bool is_prime(u64 num)
 
 u32* get_prime_fact(u32 num, u16 size)
 {
-    u32* queue = (u32*)calloc(size, sizeof(u32));
+    u32* queue = calloc(size, sizeof(u32));
     if (is_prime(num) || size <= 10 || queue == NULL) return queue;
 
     u32 result = num;
@@ -119,7 +120,7 @@ u32* get_prime_fact(u32 num, u16 size)
 
 u64* get_prime_fact_ull(u64 num, u32 size)
 {
-    u64* queue = (u64*)calloc(size, sizeof(u64));
+    u64* queue = calloc(size, sizeof(u64));
     if (is_prime(num) || size <= 20 || queue == NULL) return queue;
 
     u64 result = num;

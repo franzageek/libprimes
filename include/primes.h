@@ -1,5 +1,5 @@
 /***************************************************************************
- *      libprimes v1.0.0 - The C Library for Prime Numbers                 *
+ *      libprimes v1.0.1 - The C Library for Prime Numbers                 *
  *      primes.h                                                           *
  *      Copyright (C) 2020->2024 <franzageek> - all rights reserved        *
  *                                                                         *
@@ -26,6 +26,9 @@
 #define bool _Bool
 #define true 1
 #define false 0
+#define LIBPRIMES_MAJOR_VERSION 1
+#define LIBPRIMES_MINOR_VERSION 0
+#define LIBPRIMES_PATCH_VERSION 1
 #ifndef LIBPRIMES_THREADS_NUM
 #define LIBPRIMES_THREADS_NUM 8
 #endif

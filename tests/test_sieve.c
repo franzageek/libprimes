@@ -21,7 +21,7 @@ int test_generate_primes()
     u64* primes = generate_primes(limit, &count);
     assert_cmp(count, 7, &exitCode);
     for (size_t i = 0; i < count; ++i)
-        assert_cmp(primes[i], test18[i]);
+        assert_cmp(primes[i], test18[i], &exitCode);
 
     free(primes);
 

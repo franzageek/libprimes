@@ -1,4 +1,5 @@
 #include "../include/primes.h"
+#include <stdio.h>
 
 void assert(bool condition, const char* message, int* exitCode)
 {

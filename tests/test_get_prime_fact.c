@@ -1,4 +1,5 @@
 #include "../include/primes.h"
+#include <stdio.h>
 
 void assert_cmp(uint64_t n1, uint64_t n2, int* exitCode)
 {

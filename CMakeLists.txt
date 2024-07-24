@@ -8,7 +8,7 @@ set(CMAKE_C_FLAGS_DEBUG "-g -O0 -ggdb -Wall -Wextra -pedantic")
 
 option(BUILD_TESTS "Build tests" ON)
 
-add_library(primes STATIC src/*.c)
+add_library(primes STATIC src/primes.c src/sieve.c)
 target_include_directories(primes PUBLIC "${CMAKE_SOURCE_DIR}/include")
 target_link_libraries(primes PRIVATE pthread)
 

@@ -64,26 +64,26 @@ bool is_prime(u64 num)
     }
     else
     {
-        #if LIBPRIMES_THREADS_NUM < 2
-            #undef LIBPRIMES_THREADS_NUM
-            #define LIBPRIMES_THREADS_NUM 8
+        #if LIBPRIMES_THREAD_NUM < 2
+            #undef LIBPRIMES_THREAD_NUM
+            #define LIBPRIMES_THREAD_NUM 8
         #endif
 
         bool is_prime = false;
-        pthread_t threads[LIBPRIMES_THREADS_NUM];
-        thread_data data[LIBPRIMES_THREADS_NUM];
+        pthread_t threads[LIBPRIMES_THREAD_NUM];
+        thread_data data[LIBPRIMES_THREAD_NUM];
         u64 sqrt_num = sqrt(num);
-        u64 range = (sqrt_num - 5) / LIBPRIMES_THREADS_NUM +1;
+        u64 range = (sqrt_num - 5) / LIBPRIMES_THREAD_NUM +1;
         
-        for (int i = 0; i < LIBPRIMES_THREADS_NUM; i++)
+        for (u16 i = 0; i < LIBPRIMES_THREAD_NUM; ++i)
         {
             data[i].num = num;
             data[i].start = 5 + i * range;
-            data[i].end = (i == LIBPRIMES_THREADS_NUM-1) ? sqrt_num : (5 + (i+1) * range - 1);
+            data[i].end = (i == LIBPRIMES_THREAD_NUM-1) ? sqrt_num : (5 + (i+1) * range - 1);
             data[i].is_prime = false;
             pthread_create(&threads[i], NULL, trial_division, &data[i]);
         }
-        for (int i = 0; i < LIBPRIMES_THREADS_NUM; i++)
+        for (u16 i = 0; i < LIBPRIMES_THREAD_NUM; ++i)
         {
             pthread_join(threads[i], NULL);
             is_prime |= data[i].is_prime;

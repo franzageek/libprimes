@@ -21,16 +21,13 @@
 
 #ifndef PRIMES_H
 #define PRIMES_H
-#include <stdio.h>
+#include <stdbool.h>
 #include <stdlib.h>
-#define bool _Bool
-#define true 1
-#define false 0
 #define LIBPRIMES_MAJOR_VERSION 1
 #define LIBPRIMES_MINOR_VERSION 0
 #define LIBPRIMES_PATCH_VERSION 1
-#ifndef LIBPRIMES_THREADS_NUM
-#define LIBPRIMES_THREADS_NUM 8
+#ifndef LIBPRIMES_THREAD_NUM
+#define LIBPRIMES_THREAD_NUM 8
 #endif
 typedef uint16_t u16;
 typedef uint32_t u32;

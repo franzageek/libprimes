@@ -82,6 +82,6 @@ int main()
     int exitCode = 0;
     printf("Testing \"get_prime_fact()\"...\n");
     exitCode = test_get_prime_factors();
-    printf("Test exit code: \e[0;36m%d\e[0m (Threads used: \e[0;36m%d\e[0m) \n", exitCode, LIBPRIMES_THREADS_NUM);
+    printf("Test exit code: \e[0;36m%d\e[0m (Threads used: \e[0;36m%d\e[0m) \n", exitCode, LIBPRIMES_THREAD_NUM);
     exit(exitCode);
 }

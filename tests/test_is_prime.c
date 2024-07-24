@@ -121,6 +121,6 @@ int main()
     int exitCode = 0;
     printf("Testing \"is_prime()\"...\n");
     exitCode = test_is_prime();
-    printf("Test exit code: \e[0;36m%d\e[0m (Threads: \e[0;36m%d\e[0m) \n", exitCode, LIBPRIMES_THREADS_NUM);
+    printf("Test exit code: \e[0;36m%d\e[0m (Threads: \e[0;36m%d\e[0m) \n", exitCode, LIBPRIMES_THREAD_NUM);
     exit(exitCode);
 }

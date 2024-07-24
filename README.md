@@ -48,7 +48,7 @@ You'll just have to edit the `BUILD_DIR`, the `BUILD_CONFIG` and the `RUN_TESTS`
 
 ## Compile against libprimes
 
-To compile a program which uses functions from the libprimes library, you first have to install it, then make sure your program includes the `primes.h` header, then you're gonna need to add the `-lprimes` option to your compile command.
+To compile a program that uses functions from the libprimes library, you first have to install it, then make sure your program includes the `primes.h` header, then you're gonna need to add the `-lprimes` option to your compile command.
 
 E.G. if you're compiling with gcc, you're gonna need to run a similar command:
 

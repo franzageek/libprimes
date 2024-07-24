@@ -16,7 +16,7 @@ _**libprimes**_ is a library written in C whose aim is to provide a bunch of use
 
 Its first version, as of July 23rd 2024, includes:
 
-- a primimality-check function;
+- a primality-check function;
 - a prime factorization algorithm.
 
 I'm planning to keep on adding more & more features to it, in the hope for it to be adopted from more & more people.

@@ -30,13 +30,6 @@ Just download the source code, extract it somewhere comfortable, then open a com
 ```bash
 $ sudo chmod +x ./configure.sh
 ```
-
-to make the script executable, then run it like so:
-
-- If you're on Linux, first run:
-```bash
-$ sudo chmod +x ./configure.sh
-```
 to make the script executable, then run it like so:
 ```bash
 $ ./configure.sh

@@ -1,4 +1,5 @@
 ![](https://img.shields.io/github/license/franzageek/libprimes)
+
 ![](https://img.shields.io/github/v/release/franzageek/libprimes)
 ![](https://img.shields.io/github/downloads/franzageek/libprimes/total)
 ![](https://img.shields.io/github/last-commit/franzageek/libprimes)
@@ -6,7 +7,7 @@
 
 # libprimes
 
-A C/C++ library containing various prime number utilities.
+A cross-platform C/C++ library containing various prime number utilities.
 
 **<kbd>[Introduction](#introduction)</kbd>** - **<kbd>[How to build](#how-to-build)</kbd>** - **<kbd>[Compile against libprimes](#compile-against-libprimes)</kbd>** - **<kbd>[Additional info](#additional-info)</kbd>**
 
@@ -26,10 +27,13 @@ I'm planning to keep on adding more & more features to it, in the hope for it to
 Just download the source code, extract it somewhere comfortable, then open a command prompt in that folder and run the following command:
 
 - If you're on Linux, first run:
+
 ```bash
 $ sudo chmod +x ./configure.sh
 ```
+
 to make the script executable, then run it like so:
+
 ```bash
 $ ./configure.sh
 ```

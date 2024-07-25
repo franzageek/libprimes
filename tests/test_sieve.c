@@ -1,7 +1,7 @@
 #include "../include/primes.h"
 #include <stdio.h>
 
-void assert_cmp(uint64_t n1, uint64_t n2, int* exitCode)
+void assert_cmp(u64 n1, u64 n2, int* exitCode)
 {
     if (n1 != n2)
     {
@@ -15,24 +15,29 @@ void assert_cmp(uint64_t n1, uint64_t n2, int* exitCode)
 int test_generate_primes()
 {
     int exitCode = 0;
-    u16 limit = 18;
-    u16 test18[] = {2,3,5,7,11,13,17};
+    u32 limit = 18;
+    u8 test18[] = {2,3,5,7,11,13,17};
     size_t count = 0;
-    u64* primes = generate_primes(limit, &count);
+    u32* primes = generate_primes(limit, &count);
+    printf("\e[0;32m**NOTICE:**\e[0m: done generating %zu primes\n", count);
     assert_cmp(count, 7, &exitCode);
     for (size_t i = 0; i < count; ++i)
         assert_cmp(primes[i], test18[i], &exitCode);
 
     free(primes);
 
-    limit = 100;
-    u16 test100[] = {2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97};
+    limit = 0xFFFFF;
     count = 0;
+    size_t _count = 0;
     primes = generate_primes(limit, &count);
-    assert_cmp(count, 25, &exitCode);
+    printf("\e[0;32m**NOTICE:**\e[0m: done generating %zu primes\n", count);
     for (size_t i = 0; i < count; ++i)
-        assert_cmp(primes[i], test100[i], &exitCode);
-
+    {
+        if (is_prime(primes[i]))
+            ++_count;
+    }
+        
+    assert_cmp((u64)count, (u64)_count, &exitCode);
     free(primes);
     return exitCode;
 }

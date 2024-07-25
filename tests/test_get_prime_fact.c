@@ -1,7 +1,7 @@
 #include "../include/primes.h"
 #include <stdio.h>
 
-void assert_cmp(uint64_t n1, uint64_t n2, int* exitCode)
+void assert_cmp(u64 n1, u64 n2, int* exitCode)
 {
     if (n1 != n2)
     {
@@ -17,9 +17,9 @@ int test_get_prime_factors()
     int exitCode = 0;
     const int queue_size = 25;
     int i = 0;
-    uint32_t num = (uint32_t)2*2*11*97*97;
-    uint64_t result = 1;
-    uint32_t* queue = get_prime_fact(num, queue_size);
+    u32 num = (u32)2*2*11*97*97;
+    u64 result = 1;
+    u32* queue = get_prime_fact(num, queue_size);
     while (queue[i] != 0)
         result *= queue[i++];
 
@@ -28,7 +28,7 @@ int test_get_prime_factors()
     queue = NULL;
 
     i = 0;
-    num = (uint32_t)3*3*11*13*13*97*163;
+    num = (u32)3*3*11*13*13*97*163;
     result = 1;
     queue = get_prime_fact(num, queue_size);
     while (queue[i] != 0)
@@ -39,9 +39,9 @@ int test_get_prime_factors()
     queue = NULL;
 
     i = 0;
-    uint64_t num64 = (uint64_t)2*3*7*17*3301*60601*20573039ull;
+    u64 num64 = (u64)2*3*7*17*3301*60601*20573039ull;
     result = 1;
-    uint64_t* queue64 = get_prime_fact_ull(num64, queue_size);
+    u64* queue64 = get_prime_fact_ull(num64, queue_size);
     while (queue64[i] != 0)
         result *= queue64[i++];
 
@@ -50,7 +50,7 @@ int test_get_prime_factors()
     queue64 = NULL;
 
     i = 0;
-    num64 = (uint64_t)17*3301*5156897456*4762379911ull;
+    num64 = (u64)17*3301*5156897456*4762379911ull;
     result = 1;
     queue64 = get_prime_fact_ull(num64, queue_size);
     while (queue64[i] != 0)
@@ -61,7 +61,7 @@ int test_get_prime_factors()
     queue64 = NULL;
 
     i = 0;
-    num64 = (uint64_t)3*3*3*5*5*11*16993*36073*807379ull;
+    num64 = (u64)3*3*3*5*5*11*16993*36073*807379ull;
     result = 1;
     queue64 = get_prime_fact_ull(num64, queue_size);
     while (queue64[i] != 0)

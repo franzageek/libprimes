@@ -27,8 +27,9 @@
 #define LIBPRIMES_MINOR_VERSION 0
 #define LIBPRIMES_PATCH_VERSION 1
 #ifndef LIBPRIMES_THREAD_NUM
-#define LIBPRIMES_THREAD_NUM 8
+#define LIBPRIMES_THREAD_NUM 16
 #endif
+typedef uint8_t u8;
 typedef uint16_t u16;
 typedef uint32_t u32;
 typedef uint64_t u64;
@@ -36,6 +37,6 @@ typedef uint64_t u64;
 bool is_prime(u64 num);
 u32* get_prime_fact(u32 num, u16 size);
 u64* get_prime_fact_ull(u64 num, u32 size);
-u64* generate_primes(u64 limit, size_t* count);
+u32* generate_primes(u32 limit, size_t* count);
 
 #endif

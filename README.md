@@ -1,5 +1,4 @@
 ![](https://img.shields.io/github/license/franzageek/libprimes)
-
 ![](https://img.shields.io/github/v/release/franzageek/libprimes)
 ![](https://img.shields.io/github/downloads/franzageek/libprimes/total)
 ![](https://img.shields.io/github/last-commit/franzageek/libprimes)
@@ -34,6 +33,11 @@ $ sudo chmod +x ./configure.sh
 
 to make the script executable, then run it like so:
 
+- If you're on Linux, first run:
+```bash
+$ sudo chmod +x ./configure.sh
+```
+to make the script executable, then run it like so:
 ```bash
 $ ./configure.sh
 ```

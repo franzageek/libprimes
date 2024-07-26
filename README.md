@@ -23,7 +23,9 @@ I'm planning to keep on adding more & more features to it, in the hope for it to
 
 ## How to build
 
-Just download the source code, extract it somewhere comfortable, then open a command prompt in that folder and run the following command:
+First, check that `make`, `cmake` and `ctest`(optional) are installed on your system.
+
+Then, download the source code, extract it somewhere comfortable, then open a command prompt in that folder and proceed as follows:
 
 - If you're on Linux, first run:
 

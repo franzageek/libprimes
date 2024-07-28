@@ -9,7 +9,7 @@
 
 A cross-platform C/C++ library containing various prime number utilities.
 
-**`<kbd>`[Introduction](#introduction) `</kbd>`** - **`<kbd>`[How to build](#how-to-build) `</kbd>`** - **`<kbd>`[Compile against libprimes](#compile-against-libprimes) `</kbd>`** - **`<kbd>`[Additional info](#additional-info) `</kbd>`**
+**<kbd>[Introduction](#introduction)</kbd>** - **<kbd>[How to build](#how-to-build)</kbd>** - **<kbd>[Compile against libprimes](#compile-against-libprimes)</kbd>** - **<kbd>[Additional info](#additional-info)</kbd>**
 
 ## Introduction
 

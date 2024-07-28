@@ -29,7 +29,7 @@ for %%a in (cmake, make, ctest) do (
     where %%a >nul 2>nul
     if %errorlevel% neq 0 (
         echo Error: %%a is not installed
-        exit 1
+        exit /b 1
     )
 )
 
@@ -44,16 +44,16 @@ if "%RUN_TESTS%" equ "true" (
     make -j
     ctest -VV -j
     if %errorlevel% neq 0 (
-        echo One or more tests failed. Aborting installation (build files will be kept).
-        exit 1
+        echo One or more tests failed. Aborting installation ^(build files will be kept^).
+        exit /b 1
     )
     echo All tests passed, proceeding.
     make install -j
-    exit
+    exit /b
 )
 
 cmake -DBUILD_TESTS=OFF -DCMAKE_BUILD_TYPE=%BUILD_CONFIG% ..
 
 make install -j
 
-exit
+exit /b

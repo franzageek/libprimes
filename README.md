@@ -8,7 +8,7 @@
 
 A cross-platform C/C++ library containing various prime number utilities.
 
-**<kbd>[Introduction](#introduction)</kbd>** - **<kbd>[How to build](#how-to-build)</kbd>** - **<kbd>[Compile against libprimes](#compile-against-libprimes)</kbd>** - **<kbd>[Additional info](#additional-info)</kbd>**
+**`<kbd>`[Introduction](#introduction)`</kbd>`** - **`<kbd>`[How to build](#how-to-build)`</kbd>`** - **`<kbd>`[Compile against libprimes](#compile-against-libprimes)`</kbd>`** - **`<kbd>`[Additional info](#additional-info)`</kbd>`**
 
 ## Introduction
 
@@ -27,17 +27,19 @@ First, check that `make`, `cmake` and `ctest`(optional) are installed on your sy
 
 Then, download the source code, extract it somewhere comfortable, then open a command prompt in that folder and proceed as follows:
 
-- If you're on Linux, first run:
+- If you're on Linux or macOS, first run:
 
 ```bash
 $ sudo chmod +x ./configure.sh
 ```
+
 to make the script executable, then run it like so:
+
 ```bash
-$ ./configure.sh
+$ sudo ./configure.sh
 ```
 
-- Or, if you run Windows:
+- Or, if you run Windows, run the following command from an elevated command prompt:
 
 ```batch
 > configure.bat

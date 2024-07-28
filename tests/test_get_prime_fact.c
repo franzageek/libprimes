@@ -5,11 +5,11 @@ void assert_cmp(u64 n1, u64 n2, int* exitCode)
 {
     if (n1 != n2)
     {
-        printf("\e[0;31mTEST FAILED\e[0m: %llu should match with %llu\n", n1, n2);
+        printf("\e[0;31mTEST FAILED\e[0m: %" PRIu64 " should match with %" PRIu64 "\n", n1, n2);
         *exitCode = 1;
     }
     else
-        printf("\e[0;32mTEST PASSED\e[0m: %llu should match with %llu\n", n1, n2);
+        printf("\e[0;32mTEST PASSED\e[0m: %" PRIu64 " should match with %" PRIu64 "\n", n1, n2);
 }
 
 int test_get_prime_factors()
@@ -41,7 +41,7 @@ int test_get_prime_factors()
     i = 0;
     u64 num64 = (u64)2*3*7*17*3301*60601*20573039ull;
     result = 1;
-    u64* queue64 = get_prime_fact_ull(num64, queue_size);
+    u64* queue64 = get_prime_fact_64(num64, queue_size);
     while (queue64[i] != 0)
         result *= queue64[i++];
 
@@ -52,7 +52,7 @@ int test_get_prime_factors()
     i = 0;
     num64 = (u64)17*3301*5156897456*4762379911ull;
     result = 1;
-    queue64 = get_prime_fact_ull(num64, queue_size);
+    queue64 = get_prime_fact_64(num64, queue_size);
     while (queue64[i] != 0)
         result *= queue64[i++];
 
@@ -63,7 +63,7 @@ int test_get_prime_factors()
     i = 0;
     num64 = (u64)3*3*3*5*5*11*16993*36073*807379ull;
     result = 1;
-    queue64 = get_prime_fact_ull(num64, queue_size);
+    queue64 = get_prime_fact_64(num64, queue_size);
     while (queue64[i] != 0)
         result *= queue64[i++];
 
@@ -72,7 +72,7 @@ int test_get_prime_factors()
     queue64 = NULL;
 
     num64 = 3;
-    queue64 = get_prime_fact_ull(num64, 10); 
+    queue64 = get_prime_fact_64(num64, 10); 
     assert_cmp(*queue64, 0, &exitCode);
     free(queue64);
     return exitCode;

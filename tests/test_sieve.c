@@ -5,11 +5,11 @@ void assert_cmp(u64 n1, u64 n2, int* exitCode)
 {
     if (n1 != n2)
     {
-        printf("\e[0;31mTEST FAILED\e[0m: %llu should match with %llu\n", n1, n2);
+        printf("\e[0;31mTEST FAILED\e[0m: %" PRIu64 " should match with %" PRIu64 "\n", n1, n2);
         *exitCode = 1;
     }
     else
-        printf("\e[0;32mTEST PASSED\e[0m: %llu should match with %llu\n", n1, n2);
+        printf("\e[0;32mTEST PASSED\e[0m: %" PRIu64 " should match with %" PRIu64 "\n", n1, n2);
 }
 
 int test_generate_primes()

@@ -10,7 +10,7 @@ option(BUILD_TESTS "Build tests" ON)
 
 add_library(primes STATIC src/primes.c src/sieve.c)
 target_include_directories(primes PUBLIC "${CMAKE_SOURCE_DIR}/include")
-target_link_libraries(primes PRIVATE pthread)
+target_link_libraries(primes PRIVATE pthread m)
 
 install(TARGETS primes DESTINATION lib)
 install(FILES include/primes.h DESTINATION include)

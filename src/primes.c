@@ -118,7 +118,7 @@ u32* get_prime_fact(u32 num, u16 size)
     return queue;
 }
 
-u64* get_prime_fact_ull(u64 num, u32 size)
+u64* get_prime_fact_64(u64 num, u32 size)
 {
     u64* queue = calloc(size, sizeof(u64));
     if (is_prime(num) || size <= 20 || queue == NULL) return queue;

@@ -23,6 +23,7 @@
 #define PRIMES_H
 #include <stdbool.h>
 #include <stdlib.h>
+#include <stdint.h>
 #include <inttypes.h>
 #define LIBPRIMES_MAJOR_VERSION 1
 #define LIBPRIMES_MINOR_VERSION 0
@@ -30,10 +31,10 @@
 #ifndef LIBPRIMES_THREAD_NUM
 #define LIBPRIMES_THREAD_NUM 16
 #endif
-typedef __uint8_t u8;
-typedef __uint16_t u16;
-typedef __uint32_t u32;
-typedef __uint64_t u64;
+typedef uint8_t u8;
+typedef uint16_t u16;
+typedef uint32_t u32;
+typedef uint64_t u64;
 
 bool is_prime(u64 num);
 u32* get_prime_fact(u32 num, u16 size);

@@ -39,7 +39,7 @@ if not exist %BUILD_DIR% (
 
 cd %BUILD_DIR%
 
-if "%RUN_TESTS%" equ "true" (
+if %RUN_TESTS% equ "true" (
     cmake -DCMAKE_BUILD_TYPE=%BUILD_CONFIG% ..
     make -j
     ctest -VV -j

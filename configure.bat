@@ -1,6 +1,6 @@
 @echo off
 
-::  *** LIBPRIMES 1.0.0 INSTALLER ***
+::  *** LIBPRIMES 1.0.1 INSTALLER ***
 ::  *** developed by <franzageek> ***
 ::  
 :: /*************************************************
@@ -22,7 +22,7 @@ set BUILD_CONFIG="Release"
 :: Decide whether or not to run tests [true||false]
 set RUN_TESTS="true"
 
-echo //   libprimes v1.0.0   //
+echo //   libprimes v1.0.1   //
 echo // made by ^<franzageek^> //
 
 for %%a in (cmake, make, ctest) do (

@@ -48,11 +48,10 @@ if %RUN_TESTS% equ "true" (
         exit /b 1
     )
     echo All tests passed, proceeding.
-    make install -j
-    exit /b
+    cmake -DBUILD_TESTS=OFF -DCMAKE_BUILD_TYPE=%BUILD_CONFIG% .. >nul 2>&1
+) else (
+    cmake -DBUILD_TESTS=OFF -DCMAKE_BUILD_TYPE=%BUILD_CONFIG% ..
 )
-
-cmake -DBUILD_TESTS=OFF -DCMAKE_BUILD_TYPE=%BUILD_CONFIG% ..
 
 make install -j
 

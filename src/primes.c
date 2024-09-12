@@ -108,7 +108,7 @@ u32* get_prime_fact(u32 num, u16 size)
 
     for (u32 i = 3; i * i <= result && curr_size < size; i+=2)
     {
-        while (result % i == 0)
+        while (result % i == 0 && curr_size < size)
         {
             result /= i;
             queue[curr_size++] = i;
@@ -134,7 +134,7 @@ u64* get_prime_fact_64(u64 num, u32 size)
 
     for (u64 i = 3; i * i <= result && curr_size < size; i+=2)
     {
-        while (result % i == 0)
+        while (result % i == 0 && curr_size < size)
         {
             result /= i;
             queue[curr_size++] = i;

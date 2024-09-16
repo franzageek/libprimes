@@ -76,7 +76,7 @@ u32* generate_primes(u32 limit, size_t* count)
     
     memset(sieve, true, limit+1);
     *count = 0;
-    if (limit <= 0xFF)
+    if (limit <= 0xFFFFFFFE) //Temporary
     {
         for (u32 i = 2; i <= limit; ++i)
         {

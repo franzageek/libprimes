@@ -20,6 +20,7 @@
  ***************************************************************************/
 
 #include <math.h>
+#include <stdlib.h>
 #include <pthread.h>
 #include "../include/primes.h"
 

@@ -16,29 +16,36 @@ int test_generate_primes()
 {
     int exitCode = 0;
     u32 limit = 18;
-    u8 test18[] = {2,3,5,7,11,13,17};
-    size_t count = 0;
-    u32* primes = generate_primes(limit, &count);
-    printf("\e[0;32m**NOTICE:**\e[0m: done generating %zu primes\n", count);
+    u8 test18[] = {0,0,2,3,0,5,0,7,0,0,0,11,0,13,0,0,0,17};
+    bool* sieve = generate_primes(limit);
+    printf("\e[0;32m**NOTICE:**\e[0m: done generating primes up to %u\n", limit);
+    u32 count = 0;
+    for (size_t i = 0; i <= limit; ++i)
+    {
+        if (sieve[i]) 
+        {
+            ++count;
+            assert_cmp(i, test18[i], &exitCode);
+        }
+    }
     assert_cmp(count, 7, &exitCode);
-    for (size_t i = 0; i < count; ++i)
-        assert_cmp(primes[i], test18[i], &exitCode);
-
-    free(primes);
+    free(sieve);
 
     limit = 0xFFFFF;
     count = 0;
     size_t _count = 0;
-    primes = generate_primes(limit, &count);
-    printf("\e[0;32m**NOTICE:**\e[0m: done generating %zu primes\n", count);
-    for (size_t i = 0; i < count; ++i)
+    sieve = generate_primes(limit);
+    printf("\e[0;32m**NOTICE:**\e[0m: done generating primes up to %u\n", limit);
+    for (size_t i = 0; i <= limit; ++i)
     {
-        if (is_prime(primes[i]))
-            ++_count;
+        if (sieve[i] && !is_prime(i))
+        {
+            printf("\e[0;31mTEST FAILED\e[0m: %lu should be prime\n", i);
+            exitCode = 1;
+        }
     }
         
-    assert_cmp((u64)count, (u64)_count, &exitCode);
-    free(primes);
+    free(sieve);
     return exitCode;
 }
 
@@ -47,6 +54,6 @@ int main()
     int exitCode = 0;
     printf("Testing \"generate_primes()\"...\n");
     exitCode = test_generate_primes();
-    printf("Test exit code: \e[0;36m%d\e[0m (Threads used: \e[0;36m%d\e[0m) \n", exitCode, LIBPRIMES_THREAD_NUM);
+    printf("Test exit code: \e[0;36m%d\e[0m\n", exitCode);
     exit(exitCode);
 }

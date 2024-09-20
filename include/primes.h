@@ -21,6 +21,9 @@
 
 #ifndef PRIMES_H
 #define PRIMES_H
+#ifdef __cplusplus
+extern "C" {
+#endif
 #include <stdbool.h>
 #include <stdlib.h>
 #include <stdint.h>
@@ -40,4 +43,7 @@ u64* get_prime_fact_64(u64 num, u32 size);
 bool* generate_sieve(u32 limit);
 u32* generate_primes(bool* sieve, u32 limit, size_t* count);
 
+#ifdef __cplusplus
+}
+#endif
 #endif

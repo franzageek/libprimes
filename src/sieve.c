@@ -23,7 +23,7 @@
 #include <stdlib.h>
 #include "../include/primes.h"
 
-bool* generate_primes(u32 limit)
+bool* generate_sieve(u32 limit)
 {
     bool* sieve = calloc((limit+1), sizeof(bool));
     if (!sieve || limit < 2 || sieve == NULL) return (bool*)NULL;
@@ -39,4 +39,18 @@ bool* generate_primes(u32 limit)
     }
     sieve[0] = sieve[1] = 0;
     return sieve;
+}
+
+u32* generate_primes(bool* sieve, u32 limit, size_t* count)
+{
+    *count = 0;
+    for (u32 i = 2; i<=limit; ++i)
+        if (sieve[i]) ++*count;
+    
+    u32* primes = malloc(*count*sizeof(u32));
+    u32 index = 0;
+    for (u32 i = 2; i<=limit; ++i)
+        if (sieve[i] && index < *count) primes[index++] = i;
+
+     return primes;
 }

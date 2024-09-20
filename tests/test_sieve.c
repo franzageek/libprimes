@@ -12,29 +12,28 @@ void assert_cmp(u64 n1, u64 n2, int* exitCode)
         printf("\e[0;32mTEST PASSED\e[0m: %" PRIu64 " should match with %" PRIu64 "\n", n1, n2);
 }
 
-int test_generate_primes()
+int test_generate_sieve()
 {
     int exitCode = 0;
     u32 limit = 18;
-    u8 test18[] = {0,0,2,3,0,5,0,7,0,0,0,11,0,13,0,0,0,17};
-    bool* sieve = generate_primes(limit);
+    size_t count = 0;
+    u8 test18[] = {2,3,5,7,11,13,17};
+    bool* sieve = generate_sieve(limit);
+    u32* primes = generate_primes(sieve, limit, &count);
     printf("\e[0;32m**NOTICE:**\e[0m: done generating primes up to %u\n", limit);
-    u32 count = 0;
-    for (size_t i = 0; i <= limit; ++i)
+    for (size_t i = 0; i < count; ++i)
     {
-        if (sieve[i]) 
-        {
-            ++count;
-            assert_cmp(i, test18[i], &exitCode);
-        }
+        if (primes[i]) 
+            assert_cmp(primes[i], test18[i], &exitCode);
     }
     assert_cmp(count, 7, &exitCode);
     free(sieve);
+    free(primes);
 
     limit = 0xFFFFF;
     count = 0;
     size_t _count = 0;
-    sieve = generate_primes(limit);
+    sieve = generate_sieve(limit);
     printf("\e[0;32m**NOTICE:**\e[0m: done generating primes up to %u\n", limit);
     for (size_t i = 0; i <= limit; ++i)
     {
@@ -53,7 +52,7 @@ int main()
 {
     int exitCode = 0;
     printf("Testing \"generate_primes()\"...\n");
-    exitCode = test_generate_primes();
+    exitCode = test_generate_sieve();
     printf("Test exit code: \e[0;36m%d\e[0m\n", exitCode);
     exit(exitCode);
 }

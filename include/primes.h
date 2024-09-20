@@ -37,6 +37,7 @@ typedef uint64_t u64;
 bool is_prime(u64 num);
 u32* get_prime_fact(u32 num, u16 size);
 u64* get_prime_fact_64(u64 num, u32 size);
-bool* generate_primes(u32 limit);
+bool* generate_sieve(u32 limit);
+u32* generate_primes(bool* sieve, u32 limit, size_t* count);
 
 #endif

@@ -16,7 +16,7 @@ int test_generate_sieve()
 {
     int exitCode = 0;
     u32 limit = 18;
-    size_t count = 0;
+    u32 count = 0;
     u8 test18[] = {2,3,5,7,11,13,17};
     bool* sieve = generate_sieve(limit);
     u32* primes = generate_primes(sieve, limit, &count);
@@ -32,7 +32,7 @@ int test_generate_sieve()
 
     limit = 0xFFFFF;
     count = 0;
-    size_t _count = 0;
+    u32 _count = 0;
     sieve = generate_sieve(limit);
     printf("\e[0;32m**NOTICE:**\e[0m: done generating primes up to %u\n", limit);
     for (size_t i = 0; i <= limit; ++i)

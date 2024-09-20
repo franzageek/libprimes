@@ -41,7 +41,7 @@ bool* generate_sieve(u32 limit)
     return sieve;
 }
 
-u32* generate_primes(bool* sieve, u32 limit, size_t* count)
+u32* generate_primes(bool* sieve, u32 limit, u32* count)
 {
     *count = 0;
     for (u32 i = 2; i<=limit; ++i)

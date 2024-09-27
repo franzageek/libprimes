@@ -17,7 +17,7 @@ libprimes is still a small project, so I really appreciate the fact that you're 
 
 libprimes' code is published under the MIT License, so by contributing to the project, you agree to the license and copyright terms therein and release your contribution under these terms, unless you have my permission of publishing it under a different license.
 
-We accept contributions as pull request on the GitHub repo.
+We accept contributions as pull requess on the GitHub repo.
 Make sure to provide a clear description of the pull request, of the feature you're adding, as well as the impact and priority from your perspective. Describe the way it should be built, and how it should integrate with the rest of the project.
 
 Also make sure to clearly describe each commit, while still trying to limit the size of the first line.
